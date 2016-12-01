@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>PictureSwitch</title>
+    <style>
+        .img-box{
+            width: 100% ;
+            height:100% ;
+            left:0;
+            top:0;
+            z-index: -1;
+            position: absolute;
+        }
+        .img-box img{
+
+            position: absolute;
+            width: 100% ;
+            height: 100%;
+
+
+
+       }
+        .btn-box{
+
+            width: 42px;
+            height: auto;
+            margin: 150px  750px ;
+
+        }
+        .btn-box button{
+
+            width: 240px;
+            height: 40px;
+            border: 1px solid #89cbdb;
+            background-color: #eee;
+            border-radius: 10px;
+            font-size: 28px;
+            margin: 30px 15px;
+            color: #4c8bf5;
+            outline: none;
+
+        }
+
+        .btn-box button:hover{
+            background-color: #ddd;
+            color: #3070e0;
+        }
+    </style>
+</head>
+<body>
+<div class="img-box">
+    <img id="img" src="images/bw.jpg">
+</div>
+
+<div class="btn-box">
+    <button id="xx"  style="background: url(images/btn-gray.png)" >小&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp新</button>
+    <button id="bw"style="background: url(images/btn-blue.png)">巴&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp卫</button>
+</div>
+
+    <script>
+    var btn1=document.getElementById("xx");
+    var btn2=document.getElementById("bw");
+    var img=document.getElementById("img");
+    btn1.style.color='rgb(100,160,170)'
+    btn2.style.color='rgb(0,0,76)';
+
+    btn1.onclick=function(){
+        img.setAttribute("src","images/xx.jpg");
+        btn1.setAttribute("style","background: url(images/btn-blue.png)");
+        btn1.style.color='rgb(0,0,76)';
+        btn2.setAttribute("style","background: url(images/btn-gray.png)");
+        btn2.style.color='rgb(100,160,170)';
+
+    }
+    btn2.onclick=function(){
+        img.setAttribute("src","images/bw.jpg");
+        btn1.setAttribute("style","background: url(images/btn-gray.png)");
+        btn1.style.color='rgb(100,160,170)';
+        btn2.setAttribute("style","background: url(images/btn-blue.png)");
+        btn2.style.color='rgb(0,0,76)';
+    }
+
+</script>
+
+
+</body>
+</html>
